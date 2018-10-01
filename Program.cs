@@ -17,15 +17,11 @@ namespace UnderPressure
             Console.WriteLine($"arraySum([1, 2, 3, 4]) => {ArraySum(new List<int>(){1, 2, 3, 4})}");
         }
 
-        static int DoubleInteger(int n) {
-          return n * 2;
-        }
+    static int DoubleInteger(int n) => n * 2;
 
-        static bool IsNumberEven(int n) {
-          return n % 2 == 0;
-        }
+    static bool IsNumberEven(int n) => n % 2 == 0;
 
-        static string GetFileExtension(string filename) {
+    static string GetFileExtension(string filename) {
           // Regex regex = new Regex(@"^.+?\.([^\.]+)$");
           // Match match = regex.Match(filename);
           // if (match.Success && match.Groups.Count > 1) {
@@ -34,11 +30,7 @@ namespace UnderPressure
           // return null;
 
           string[] arr = filename.Split('.');
-          if (arr.Length < 2) {
-            return null;
-          }
-
-          return arr[arr.Length - 1];
+          return arr.Length < 2 ? null : arr[arr.Length - 1];
         }
 
         static string LongestString(List<string> arr) {
