@@ -34,19 +34,19 @@ namespace UnderPressure
         }
 
         static string LongestString(List<string> arr) {
-          string ret = "";
-          foreach (string item in arr) {
-            if (item.Length > ret.Length) {
-              ret = item;
+          string longest = "";
+          foreach (string str in arr) {
+            if (str.Length > longest.Length) {
+              longest = str;
             }
           }
-          return ret;
+          return longest;
         }
 
         static int ArraySum(List<int> arr) {
           int sum = 0;
-          foreach (int item in arr) {
-            sum += item;
+          foreach (int num in arr) {
+            sum += num;
           }
           return sum;
         }
