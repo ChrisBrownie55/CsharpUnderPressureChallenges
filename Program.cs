@@ -26,12 +26,19 @@ namespace UnderPressure
         }
 
         static string GetFileExtension(string filename) {
-          Regex regex = new Regex(@"^.+?\.([^\.]+)$");
-          Match match = regex.Match(filename);
-          if (match.Success && match.Groups.Count > 1) {
-            return match.Groups[1].Value;
+          // Regex regex = new Regex(@"^.+?\.([^\.]+)$");
+          // Match match = regex.Match(filename);
+          // if (match.Success && match.Groups.Count > 1) {
+          //   return match.Groups[1].Value;
+          // }
+          // return null;
+
+          string[] arr = filename.Split('.');
+          if (arr.Length < 2) {
+            return null;
           }
-          return null;
+
+          return arr[arr.Length - 1];
         }
 
         static string LongestString(List<string> arr) {
