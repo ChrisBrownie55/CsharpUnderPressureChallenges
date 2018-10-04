@@ -18,6 +18,9 @@ namespace UnderPressure
 
         string indexOfAllOutput = String.Join(", ", IndexOfAll("Hello world!", "ol!e"));
         Console.WriteLine($"IndexOfAll(\"Hello world!\", \"ol!e\") => [{indexOfAllOutput}]");
+
+        Console.WriteLine($"GCD(48, 18) => {GCD(48, 18)}");
+        Console.WriteLine($"GCD(18, 48) => {GCD(18, 48)}");
     }
 
 static int DoubleInteger(int n) => n * 2;
@@ -66,6 +69,10 @@ static string GetFileExtension(string filename) {
         }
       }
       return ret;
+    }
+
+    static int GCD(int a, int b) {
+      return b == 0 ? a : GCD(b, a % b);
     }
   }
 }
